@@ -42,3 +42,5 @@ mongoose.connect(process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/online_shop
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
+
+module.exports = app;
