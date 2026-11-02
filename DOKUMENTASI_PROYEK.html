@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Dokumentasi Laporan Proyek - Online Marketplace</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 25mm 20mm;
+    }
+    body {
+      font-family: Calibri, 'Segoe UI', Arial, sans-serif;
+      color: #1e293b;
+      line-height: 1.6;
+      margin: 0;
+      padding: 40px;
+      background: #f8fafc;
+    }
+    .document-card {
+      max-width: 820px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 50px 60px;
+      border-radius: 8px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+    }
+    h1 {
+      color: #1d4ed8;
+      font-size: 24pt;
+      text-align: center;
+      margin-bottom: 6px;
+      font-weight: bold;
+    }
+    .subtitle {
+      text-align: center;
+      color: #0f172a;
+      font-size: 15pt;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+    .meta {
+      text-align: center;
+      color: #64748b;
+      font-size: 11pt;
+      margin-bottom: 30px;
+      border-bottom: 1px solid #e2e8f0;
+      padding-bottom: 20px;
+    }
+    h2 {
+      color: #1d4ed8;
+      font-size: 14pt;
+      border-bottom: 1.5px solid #2563eb;
+      padding-bottom: 4px;
+      margin-top: 30px;
+      margin-bottom: 14px;
+    }
+    h3 {
+      color: #0f172a;
+      font-size: 12pt;
+      margin-top: 18px;
+      margin-bottom: 8px;
+    }
+    p, li {
+      font-size: 11pt;
+      color: #334155;
+      text-align: justify;
+    }
+    ul, ol {
+      margin-top: 6px;
+      margin-bottom: 14px;
+      padding-left: 24px;
+    }
+    li {
+      margin-bottom: 6px;
+    }
+    .link-section {
+      background: #f1f5f9;
+      border-left: 4px solid #2563eb;
+      padding: 14px 18px;
+      margin: 16px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .link-section p {
+      margin: 6px 0;
+    }
+    .link-section a {
+      color: #1d4ed8;
+      font-weight: 600;
+      text-decoration: underline;
+    }
+    @media print {
+      body {
+        background: #fff;
+        padding: 0;
+      }
+      .document-card {
+        box-shadow: none;
+        padding: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="document-card">
+    <h1>DOKUMENTASI LAPORAN PROYEK</h1>
+    <div class="subtitle">APLIKASI ONLINE MARKETPLACE (WEB &amp; MOBILE)</div>
+    <div class="meta">Integrasi Keterampilan Lab Modul 1 – 5: Frontend Web, Mobile Expo, REST API, JWT Authentication, dan Cloud Deployment</div>
+
+    <h2>BAB I. RINGKASAN PROYEK &amp; TAUTAN DEPLOYMENT</h2>
+    <p>Proyek ini mengimplementasikan sistem Online Marketplace terpadu yang dapat diakses secara publik melalui platform web dan mobile. Sistem ini didukung oleh backend API mandiri berbasis cloud serta basis data MongoDB Atlas yang mengelola data produk dan pengguna secara aman.</p>
+
+    <div class="link-section">
+      <p><strong>1. Tautan Frontend Web (Production):</strong> <a href="https://tp-2-online-shop-xnck.vercel.app" target="_blank">https://tp-2-online-shop-xnck.vercel.app</a></p>
+      <p><strong>2. Tautan Backend API Publik:</strong> <a href="https://tp-2-online-shop.vercel.app/api" target="_blank">https://tp-2-online-shop.vercel.app/api</a></p>
+      <p><strong>3. Tautan Pemeriksaan Kesehatan API:</strong> <a href="https://tp-2-online-shop.vercel.app/api/health" target="_blank">https://tp-2-online-shop.vercel.app/api/health</a></p>
+      <p><strong>4. Aplikasi Mobile (Expo Go):</strong> Project Slug "tp1-online-shop-mobile" yang dapat langsung diakses melalui aplikasi Expo Go di smartphone dengan memindai QR Code interaktif yang dihasilkan oleh Expo CLI.</p>
+      <p><strong>5. Integrasi Monitoring:</strong> Menggunakan Google Analytics 4 (GA4) dengan Measurement ID <code>G-72QV55DWHW</code> untuk memantau lalu lintas pengunjung dan interaksi halaman web secara real-time.</p>
+    </div>
+
+    <h2>BAB II. DESKRIPSI FITUR SISTEM</h2>
+    <h3>A. Fitur Aplikasi Web (Soal 1 &amp; Soal 4)</h3>
+    <ul>
+      <li><strong>Halaman Beranda (Home):</strong> Menyajikan pengenalan platform belanja online, informasi statistik kepercayaan konsumen, dan navigasi langsung ke halaman katalog produk.</li>
+      <li><strong>Halaman Daftar Produk:</strong> Menampilkan katalog produk dalam format tata letak kotak responsif (CSS Grid dan Flexbox). Dilengkapi dengan kotak pencarian instan dan penyaring (filter) kategori produk seperti Fashion, Elektronik, Makanan, Kesehatan, dan Rumah Tangga.</li>
+      <li><strong>Halaman Detail Produk:</strong> Memuat foto produk beresolusi tinggi, nama barang, harga resmi dalam format mata uang Rupiah, deskripsi spesifikasi produk, label jaminan keaslian barang dan gratis ongkos kirim, serta tombol untuk menambah kuantitas pesanan.</li>
+      <li><strong>Halaman Keranjang Belanja (Cart):</strong> Mengelola daftar barang yang telah dipilih pembeli, tombol penyesuaian kuantitas (menambah atau mengurangi jumlah barang), opsi penghapusan item dari keranjang, dan kalkulasi subtotal harga pesanan secara otomatis.</li>
+      <li><strong>Halaman Checkout &amp; Pembayaran:</strong> Formulir pengisian data pengiriman lengkap meliputi nama penerima, alamat surat elektronik, nomor kontak, alamat domisili, kode pos, dan pilihan metode pembayaran, diikuti simulasi konfirmasi pesanan berhasil.</li>
+      <li><strong>Autentikasi &amp; Proteksi Rute:</strong> Fasilitas pendaftaran pengguna baru (Registrasi) dan login akun menggunakan token keamanan JWT. Halaman katalog produk, keranjang belanja, dan proses checkout diproteksi sehingga pengguna yang belum login akan otomatis diarahkan ke formulir masuk terlebih dahulu.</li>
+      <li><strong>Standar Tampilan Antarmuka:</strong> Desain antarmuka dirancang bersih dengan skema warna utama putih dan biru, tanpa gradasi warna yang mencolok, dan seluruh ikon menggunakan bentuk geometris SVG modern tanpa memanfaatkan simbol emoticon.</li>
+    </ul>
+
+    <h3>B. Fitur Backend RESTful API (Soal 2)</h3>
+    <ul>
+      <li><strong>Manajemen Produk (Operasi CRUD):</strong> Menyediakan layanan membaca seluruh produk, mengambil detail satu produk berdasarkan identitas unik (ID), menambah produk baru, mengubah data produk, dan menghapus produk dengan validasi ketat.</li>
+      <li><strong>Autentikasi Pengguna &amp; Enkripsi Kata Sandi:</strong> Layanan pendaftaran akun dengan enkripsi kata sandi satu arah melalui algoritma Bcrypt, pengecekan duplikasi alamat email, verifikasi kredensial saat login, dan penerbitan token sesi JSON Web Token (JWT).</li>
+      <li><strong>Basis Data Cloud MongoDB Atlas:</strong> Seluruh data entitas pengguna dan produk tersimpan secara persisten pada klaster cloud MongoDB Atlas dengan skema data terstruktur.</li>
+      <li><strong>Pengaturan Akses Lintas Domain (CORS):</strong> Dikonfigurasi secara fleksibel agar dapat diakses tanpa hambatan oleh aplikasi web yang berjalan di hosting publik (Vercel) maupun aplikasi mobile Expo di smartphone.</li>
+    </ul>
+
+    <h3>C. Fitur Aplikasi Mobile (Soal 3 &amp; Soal 4)</h3>
+    <ul>
+      <li><strong>Penjelajahan Katalog Mobile:</strong> Mengambil data produk secara langsung dari backend cloud dengan fitur tarik-ke-bawah untuk memuat ulang data (Pull-to-Refresh), bilah pencarian produk cepat, dan pil penyaring kategori produk.</li>
+      <li><strong>Informasi Detail Produk:</strong> Menampilkan gambar produk proporsional, harga, label kategori, deskripsi lengkap, serta aksi langsung menambahkan produk ke keranjang belanja pengguna.</li>
+      <li><strong>Penyimpanan Token JWT di Perangkat:</strong> Mendukung login dan pendaftaran pengguna baru di mana token sesi JWT disimpan secara persisten di media penyimpanan perangkat seluler. Menyediakan tab profil anggota dan opsi keluar akun (Logout).</li>
+      <li><strong>Proteksi Transaksi:</strong> Menjaga keamanan pesanan dengan membatasi proses checkout hanya untuk pengguna yang telah terautentikasi dan login di aplikasi.</li>
+    </ul>
+
+    <h2>BAB III. ARSITEKTUR SISTEM</h2>
+    <p>Sistem Online Marketplace ini dibangun menggunakan pendekatan Arsitektur Tiga Tingkat (Three-Tier Architecture) yang terdistribusi dan mandiri:</p>
+    <ol>
+      <li><strong>Tingkat Presentasi (Presentation Tier / Frontend):</strong> Terdiri dari aplikasi web berbasis React dan aplikasi mobile berbasis React Native (Expo). Lapisan ini bertugas menyajikan antarmuka visual yang intuitif, menangani interaksi pengguna, mengelola status lokal keranjang belanja, serta berkomunikasi dengan backend melalui permintaan HTTP.</li>
+      <li><strong>Tingkat Aplikasi (Application Tier / Backend API):</strong> Dibangun dengan Node.js dan kerangka Express yang berperan sebagai pusat pengendali logika bisnis. Lapisan ini memvalidasi data masukan dari klien, memverifikasi tanda tangan digital token JWT pengguna, mengenkripsi kata sandi, dan menghubungkan komunikasi ke basis data.</li>
+      <li><strong>Tingkat Data (Data Tier / Database):</strong> Menggunakan MongoDB Atlas yang ditempatkan pada infrastruktur cloud. Menyimpan koleksi data produk (nama, deskripsi, gambar, kategori, harga) dan data akun pengguna secara terstruktur dan aman.</li>
+      <li><strong>Tingkat Pemantauan (Observability Tier):</strong> Layanan Google Analytics 4 (GA4) terpasang pada aplikasi web untuk mencatat kunjungan halaman (pageviews), durasi sesi pengguna, dan pola penjelajahan halaman katalog.</li>
+    </ol>
+
+    <h2>BAB IV. PANDUAN INSTALASI &amp; PENGOPERASIAN LOKAL</h2>
+    <p>Untuk menguji dan menjalankan aplikasi di lingkungan komputer lokal penguji, ikuti urutan langkah naratif berikut:</p>
+    <ul>
+      <li><strong>Prasyarat Sistem Komputer:</strong> Pastikan komputer telah terpasang aplikasi Node.js (versi 18 atau yang lebih baru) dan pengelola paket npm. Untuk pengujian mobile, persiapkan smartphone dengan aplikasi Expo Go yang terpasang dari Google Play Store atau Apple App Store.</li>
+      <li><strong>Langkah Pengoperasian Server Backend:</strong> Buka jendela terminal dan arahkan ke direktori server proyek. Pasang dependensi yang dibutuhkan dengan perintah instalasi paket npm. Lakukan proses pemuatan data awal (seeding) untuk memasukkan contoh katalog produk ke basis data. Jalankan server backend dalam mode pengembang sehingga server lokal aktif melayani permintaan pada port 5000.</li>
+      <li><strong>Langkah Pengoperasian Frontend Web:</strong> Buka jendela terminal baru dan arahkan ke direktori client proyek. Pasang pustaka dependensi web melalui perintah instalasi paket. Jalankan server pengembang web Vite sehingga aplikasi marketplace web dapat langsung dibuka di peramban pada port 5173.</li>
+      <li><strong>Langkah Pengoperasian Aplikasi Mobile:</strong> Buka terminal baru dan arahkan ke direktori mobile proyek. Pasang paket modul yang diperlukan menggunakan perintah instalasi npm. Mulai server Expo, kemudian buka aplikasi Expo Go pada smartphone Anda, pilih menu pindai kode QR (Scan QR Code), lalu arahkan kamera ke kode QR di layar terminal untuk menjalankan aplikasi secara langsung di ponsel.</li>
+    </ul>
+
+    <h2>BAB V. PANDUAN PENGARSIPAN &amp; PENYERAHAN TUGAS</h2>
+    <p>Sesuai petunjuk penugasan, jika dibutuhkan pengumpulan berkas fisik proyek dalam bentuk arsip terkompresi:</p>
+    <ol>
+      <li>Pastikan seluruh folder proyek (folder client, folder server, dan folder mobile) berada dalam kondisi lengkap dan rapi.</li>
+      <li>Sertakan berkas laporan dokumentasi Word ini di dalam direktori utama proyek.</li>
+      <li>Kompresi keseluruhan folder proyek ke dalam satu berkas berformat .rar atau .zip dengan nama arsip tugas yang telah ditentukan, lalu unggah ke portal tugas akademik yang disediakan.</li>
+    </ol>
+  </div>
+</body>
+</html>

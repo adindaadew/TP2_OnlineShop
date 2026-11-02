@@ -1,5 +1,8 @@
 import mongoose from 'mongoose';
+import dotenv from 'dotenv';
 import Product from './models/Product.js';
+
+dotenv.config();
 
 const products = [
     {
@@ -28,7 +31,7 @@ const products = [
     }
 ];
 
-mongoose.connect('mongodb://127.0.0.1:27017/online_shop')
+mongoose.connect(process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/online_shop')
     .then(async () => {
         console.log('Connected to MongoDB');
         await Product.deleteMany({});
